@@ -148,6 +148,26 @@ button:hover {
     transform-origin: bottom center;
 }
 
+
+/* The sidenav in which i stole from w3schools hooray (useless shit can't even write my own code damn)*/
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Page content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+
 /* id specific styling */
 #unlocked {
     color: red;

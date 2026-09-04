@@ -9,7 +9,7 @@ require_once 'includes/config_session.inc.php';
 <html lang = "en">
     <head>
         <meta charset="UTF-8">
-        <title> ARRG - rock generator </title>
+        <title> ARRG | Logout </title>
         <link rel = "stylesheet" href = "style.css">
     </head>
     <body class = "bodyDarkMode">
@@ -28,11 +28,12 @@ require_once 'includes/config_session.inc.php';
             
             <?php endif; ?>
                 
+            <h3><a href = "messaging.php?chat=home">CHAT</a></h3>
             <h3><a href = "collection.php">COLLECTION</a></h3>
             <h3><a href = "leaderboard.php">LEADERBOARD</a></h3>
             <h3><a href = "settings.php">SETTINGS</a></h3>
         </header>
-        <form action="logoutFunction.php" method="POST"> <!--runs the logoutFunction.php script when the user clicks the log out button, which logs the user out and redirects them to the homepage. -->
+        <form action="logoutFunction.inc.php" method="POST"> <!--runs the logoutFunction.php script when the user clicks the log out button, which logs the user out and redirects them to the homepage. -->
             <button type="submit">Log out</button> 
         </form>
     </body>

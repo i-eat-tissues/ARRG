@@ -54,7 +54,11 @@ try {
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <title> ARRG - rock generator </title>
+        <title> ARRG | <?php if (!$country) {
+            echo ("Global");
+        }else {
+            echo ($country);
+        }?> leaderboard </title>
         <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
@@ -73,6 +77,7 @@ try {
             
             <?php endif; ?>
                 
+            <h3><a href = "messaging.php?chat=home">CHAT</a></h3>
             <h3><a href = "collection.php">COLLECTION</a></h3>
             <h3><a href = "leaderboard.php">LEADERBOARD</a></h3>
             <h3><a href = "settings.php">SETTINGS</a></h3>

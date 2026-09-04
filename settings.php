@@ -7,7 +7,7 @@ require_once 'includes/config_session.inc.php';
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <title> ARRG - rock generator </title>
+        <title> ARRG | Settings </title>
         <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
@@ -26,6 +26,7 @@ require_once 'includes/config_session.inc.php';
             
             <?php endif; ?>
                 
+            <h3><a href = "messaging.php?chat=home">CHAT</a></h3>
             <h3><a href = "collection.php">COLLECTION</a></h3>
             <h3><a href = "leaderboard.php">LEADERBOARD</a></h3>
             <h3><a href = "settings.php">SETTINGS</a></h3>

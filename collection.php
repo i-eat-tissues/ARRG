@@ -26,7 +26,7 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <title> ARRG - rock generator </title>
+        <title> ARRG | Collection </title>
         <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
@@ -45,6 +45,7 @@
             
             <?php endif; ?>
                 
+            <h3><a href = "messaging.php?chat=home">CHAT</a></h3>
             <h3><a href = "collection.php">COLLECTION</a></h3>
             <h3><a href = "leaderboard.php">LEADERBOARD</a></h3>
             <h3><a href = "settings.php">SETTINGS</a></h3>
