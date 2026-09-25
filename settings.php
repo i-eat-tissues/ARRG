@@ -16,8 +16,12 @@ require_once 'includes/config_session.inc.php';
             
             <?php if (isset($_SESSION["user_id"])): ?>
 
-            <h3><a href="profile.php?username=<?php echo $_SESSION["username"]?>">Profile</a></h3>
-            <h3><a href="logout.php">Log out</a></h3>
+            <a href="profile.php?username=<?php echo $_SESSION["username"]?>">
+                <img src = 'images/profileIcon.png' width = 30px alt='profile'>
+            </a>
+            <a href="logout.php">
+                <img src = 'images/logoutIcon.png' width = 30px alt = 'logout'>
+            </a>
 
             <?php else: ?>
 
@@ -26,10 +30,18 @@ require_once 'includes/config_session.inc.php';
             
             <?php endif; ?>
                 
-            <h3><a href = "messaging.php?chat=home">CHAT</a></h3>
-            <h3><a href = "collection.php">COLLECTION</a></h3>
-            <h3><a href = "leaderboard.php">LEADERBOARD</a></h3>
-            <h3><a href = "settings.php">SETTINGS</a></h3>
+            <a href = "messaging.php?chat=home">
+                <img src = 'images/chatIcon.png' width = 30px alt = 'chat'>
+            </a>
+            <a href = "collection.php">
+                <img src = 'images/collectionIcon.png' width = 30px alt = 'collection'>
+            </a>
+            <a href = "leaderboard.php">
+                <img src= 'images/leaderboardIcon.png' width = 30px alt = 'leaderboard'>
+            </a>
+            <a href = "settings.php">
+                <img src = 'images/settingsIcon.png' width = 30px alt = 'settings'>
+            </a>
         </header>
         <p>hi this si where the seetings shouldddd be so yay it worked:D</p>
 

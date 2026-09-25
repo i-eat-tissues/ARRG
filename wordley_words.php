@@ -1,6 +1,14 @@
 <?php
 
 require_once 'includes/config_session.inc.php';
+require_once 'includes/dbh.inc.php';
+
+$stmt = $pdo->prepare("
+    SELECT * FROM rocks
+");
+
+$stmt->execute();
+$rocks = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -9,10 +17,10 @@ require_once 'includes/config_session.inc.php';
 <html lang = "en">
     <head>
         <meta charset="UTF-8">
-        <title> ARRG | Logout </title>
+        <title> ARRG | Home </title>
         <link rel = "stylesheet" href = "style.css">
     </head>
-    <body class='logout-body'>
+    <body>
         <header>
             <h1><a href = "index.php">ARRG - A RNG-based rock game:D </a></h1>
             
@@ -44,12 +52,28 @@ require_once 'includes/config_session.inc.php';
             <a href = "settings.php">
                 <img src = 'images/settingsIcon.png' width = 30px alt = 'settings'>
             </a>
+            <h3><a href = 'wordley.php'>WORDLEY</a></h3>
+            <h3><a href = 'oap.php'>OAP</a></h3>
         </header>
-        <div class='logout'>
-            <p>click this button to log out:(</p>
-            <form action="logoutFunction.php" method="POST"> <!--runs the logoutFunction.php script when the user clicks the log out button, which logs the user out and redirects them to the homepage. -->
-                <button class = 'logout-button'type="submit">LOG OUT</button> 
-            </form>
+        <div class='wordley-words-header'>
+            <a href='wordley.php'>
+                <button class='wordley-words-back-button'>back to wordley</button>
+            </a>
+            <p class="wordley-words-title">WORDLEY WORDS</p>
         </div>
+        <ul class='wordley-words-list'>
+            <li>poopoo</li>
+            <li>peepee</li>
+            <li>doiing</li>
+            <li>blaarp</li>
+            <li>fartsy</li>
+            <li>apples</li>
+            <li>eminem</li>
+            <li>excise</li>
+            <li>dihrea</li>
+            <li>finger</li>
+            <li>nylong</li>
+            <li>bahrom</li>
+        </ul>
     </body>
 </html>

@@ -1,13 +1,13 @@
-const rarityColors = { //change in the future, ooo i wonder if i can make a gradient somehow SOMEHOWW
-    common: "grey",
-    uncommon: "blue",
-    rare: "green",
-    epic: "purple",
-    legendary: "gold",
-    unobtainable: "red"
+const rarityColors = { 
+    common: "#03dffc",
+    uncommon: "#0480de",
+    rare: "#ab11ed",
+    epic: "#db0980",
+    legendary: "#dbb809",
+    unobtainable: "#db8009"
 };
 
-document.querySelectorAll(".rarityIndicator").forEach((indicator) => {
+document.querySelectorAll(".rock-card-rarity").forEach((indicator) => {
     const rarity = indicator.textContent.replace(/^rarity:\s*/i, "").trim().toLowerCase();
     const color = rarityColors[rarity];
 

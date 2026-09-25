@@ -2,6 +2,8 @@
 
 require_once 'includes/config_session.inc.php';
 
+$redirect = $_GET['redirect']
+
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +19,12 @@ require_once 'includes/config_session.inc.php';
             
             <?php if (isset($_SESSION["user_id"])): ?>
 
-            <h3><a href="profile.php?username=<?php echo $_SESSION["username"]?>">Profile</a></h3>
-            <h3><a href="logout.php">Log out</a></h3>
+            <a href="profile.php?username=<?php echo $_SESSION["username"]?>">
+                <img src = 'images/profileIcon.png' width = 30px alt='profile'>
+            </a>
+            <a href="logout.php">
+                <img src = 'images/logoutIcon.png' width = 30px alt = 'logout'>
+            </a>
 
             <?php else: ?>
 
@@ -27,17 +33,26 @@ require_once 'includes/config_session.inc.php';
             
             <?php endif; ?>
                 
-            <h3><a href = "messaging.php?chat=home">CHAT</a></h3>
-            <h3><a href = "collection.php">COLLECTION</a></h3>
-            <h3><a href = "leaderboard.php">LEADERBOARD</a></h3>
-            <h3><a href = "settings.php">SETTINGS</a></h3>
+            <a href = "messaging.php?chat=home">
+                <img src = 'images/chatIcon.png' width = 30px alt = 'chat'>
+            </a>
+            <a href = "collection.php">
+                <img src = 'images/collectionIcon.png' width = 30px alt = 'collection'>
+            </a>
+            <a href = "leaderboard.php">
+                <img src= 'images/leaderboardIcon.png' width = 30px alt = 'leaderboard'>
+            </a>
+            <a href = "settings.php">
+                <img src = 'images/settingsIcon.png' width = 30px alt = 'settings'>
+            </a>
         </header>
-        <form action="includes/signup.inc.php" method='POST'>
-            <h2> SIGNUP:D </h2>
-            <input type="text" name="username" placeholder="awesomerockcollector" id="usernameInput">
-            <input type="password" name="pwd" placeholder="password" id="passwordInput">
+        <form class = "loginForm" action="includes/signup.inc.php" method='POST'>
+            <h2 class = "loginHeader"> SIGNUP:D </h2>
+            <input type="text" name="username" placeholder="awesomerockcollector" id="usernameInput" class = "loginInput">
+            <input type="password" name="pwd" placeholder="password" id="passwordInput" class = "loginInput">
+            <input type='hidden' name='redirect' value = '<?=htmlspecialchars($redirect)?>'>
             <p id="errorMessage" class="error-message"></p>
-            <button id="signUpButton">LET'S GO!</button>
+            <button id="signUpButton" class = 'loginButton'>LET'S GO!</button>
         </form>
         <script src="signup.js" defer></script> <!--defer tells the browser to 
         load the script after the HTML is parsed, so that the script can access

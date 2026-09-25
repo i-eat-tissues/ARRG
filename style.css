@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Walter+Turncoat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 header {
-    background-color: #083350;
+    background-color: #06263b;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Pushes logo to left and nav to right */
@@ -24,14 +30,101 @@ header h3 a:hover {
     color: #626262;
 }
 
-body {
-    background: #383838;
-    margin: 0;
-    font-family: Walter Turncoat;
-    text-align: center;
+/* site wide SIDENAV side nav side navigation */
+
+/*taken from w3 schools */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #031a29; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+    border-left: 3px solid #626262;
+    }
+
+.sidenav a {
+    font-size: 20px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #c4c4c4;
+    display: block;
+    font-family: "Cabin Sketch", sans-serif;
+
 }
 
-form, figure {
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.hamberger-menu-thing-i-think {
+    font-size: 36px;
+    color: #c4c4c4;
+    font-family: "Cabin Sketch", sans-serif;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+.closebtn {
+    font-family: "Cabin Sketch", sans-serif;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .3s;
+    padding: 20px;
+}
+
+/* site wide background */
+
+body {
+    background: #282828;
+    margin: 0;
+}
+
+figcaption {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #626262;
+    font-size: 14px;
+}
+
+/* site wide used login or signup message */
+
+.login-or-signup {
+    font-family: Walter Turncoat;
+    text-align: center;
+    margin: auto;
+    max-width: 500px;
+    background-color: #383838;
+    border: 3px solid #626262;
+    margin-top: 40px;
+    border-radius: 10px;
+    padding: 15px;
+    color: #b3b3b3;
+}
+
+.login-or-signup a {
+    color: #efefef
+}
+
+/* login */
+
+.loginForm {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -44,7 +137,7 @@ form, figure {
     padding: 15px;
 }
 
-button {
+.loginButton {
     background-color: #383838;
     color: #c4c4c4;
     font-family: Walter Turncoat;
@@ -56,7 +149,7 @@ button {
     align-self: center;
 }
 
-input {
+.loginInput {
     background-color: #c4c4c4;
     border-radius: 10px;
     font-family: Walter Turncoat;
@@ -69,7 +162,7 @@ input {
     align-self: center;
 }
 
-h2 {
+.loginHeader {
     font-family: "Cabin Sketch", sans-serif;
     color: #c4c4c4;   
     font-size: 50px; 
@@ -80,12 +173,12 @@ h2 {
     align-self: center;
 }
 
-a {
+ a {
     color: #c4c4c4;   
     text-decoration: none;
-}
+} 
 
-p {
+/*p {
     text-align: center;
     margin: auto;
     max-width: 500px;
@@ -94,15 +187,45 @@ p {
     margin-top: 40px;
     border-radius: 10px;
     padding: 15px;
-}
-
+} 
+*/
 p:empty {
     display: none;
 }
 
-button:hover {
+/* logout */
+
+.logout {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    margin: 30px auto 0;
+    background-color: #303030;
+    border: 1px #626262 solid;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.logout p {
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+}
+
+.logout-button {
+    background-color:#303030;
+    border: 3px solid #626262;
+    border-radius: 10px;
+    padding: 15px;
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+}
+
+.loginButton:hover {
     background-color: #626262;
 }
+
 
 /* make a style for figcaptions LATER. make it italics and #c4c4c4 */
 
@@ -113,8 +236,6 @@ button:hover {
     display: block;
 }
 
-/* classes */
-
 .flex {
     display: flex;
     justify-content: center; 
@@ -123,7 +244,9 @@ button:hover {
     margin-bottom: 0px;
 }
 
-.rockMessage {
+/* index */
+
+.rock-message {
     font-family: "Slackey", sans-serif;
     color: #c4c4c4;
     font-size: 20px;
@@ -133,6 +256,610 @@ button:hover {
     height: 100px; 
 }
 
+/*leaderboard */
+
+.displaying-leaderboard {
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.leaderboard-header {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.leaderboard-selections {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+.country-select {
+    font-size: 20px;
+    font-family: "Cousine", monospace;
+    background-color: #383838;
+    color:#c4c4c4;
+    border: 2px solid #626262;
+    border-radius: 4px;
+    margin-left: 15px
+}
+
+.country-select option {
+    background-color: #383838;
+    font-family: "Cousine", monospace;
+    color: #626262;
+}
+
+.leaderboard-column-indicator {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    padding: 5px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leaderboard-column-indicator-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* keep all size placements the same EXCEPT for the font size/color. */
+.first-placement{
+    color: #bab520;
+    font-weight: bold;
+    font-family: "Baloo Da 2", sans-serif;
+    margin-left: 10px;
+}
+
+.second-placement {
+    color: #878784;
+    font-weight: bold;
+    font-family: "Baloo Da 2", sans-serif;
+    margin-left: 10px;
+}
+
+.third-placement {
+    color: #7a5f00;
+    font-weight: bold;
+    font-family: "Baloo Da 2", sans-serif;
+    margin-left: 10px;
+}
+
+.placement {
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+    margin-left: 10px;
+}
+
+.leaderboard-card {
+    background-color: #303030;
+    border-radius: 10px;
+    border: solid #645f5f 3px;
+    padding: 5px;
+    width: 75%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leaderboard-card-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score-text {
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+}
+
+.leaderboard-card-country-rock {
+    background-color: #303030;
+    border: 0;
+}
+.leaderboard-card .countryRock {
+    background-color: #303030;
+    border: 0;
+}
+
+
+/* messaging */
+
+body.messaging-page {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body.messaging-page header {
+    flex-shrink: 0;
+}
+
+.messaging-layout {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.chat-sidenav {
+    width: 25%;
+    box-sizing: border-box;
+    margin: 0;
+    align-self: stretch;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conversations-header {
+    font-family: "Roboto Mono", monospace;
+    font-size: 17px;
+    color: #c4c4c4;
+    margin-bottom: 5px;
+}
+
+.chats-list {
+    list-style: none;
+    align-items: left;
+    padding-left: 10px;
+    background-color: #303030;
+    border-radius: 10px;
+    border: #626262 1px solid;
+    margin-top: 0;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.profile-display {
+    background-color: #303030;
+    border-radius: 10px;
+    border: #626262 1px solid;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.profile-display button {
+    background-color: #303030;
+    border: 0;
+}
+
+.select-chat-message {
+    margin: auto auto;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+}
+
+.cur-user-display {
+    width: 20%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    align-self: flex-start;
+    background-color: #303030;
+    border: solid #645f5f 0.5px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    height: 100%;
+}
+
+.cur-user-display .countryRock {
+    background-color: #303030;
+    border: 0;
+}
+
+.cur-user-display .cur-user-name {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.cur-user-display-username {
+    font-size: 20px;
+    margin: 5px auto;
+}
+
+.chat-container {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-input {
+    position: relative;
+}
+
+.chat-input textarea {
+    display: block;
+}
+
+.chatting-with-user {
+    margin-top: 0;
+    margin-bottom: 20px;
+    background-color: #303030;
+    border: 0.5px solid #626262;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+}
+.chat-messages {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    scrollbar-width: none;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.chat-input textarea {
+    background-color: #383838;
+    border: solid #645f5f 0.5px;
+    border-radius: 10px;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    font-size: 15px;
+    padding-left: 10px;
+    width: 99%;
+    resize: none;
+    scrollbar-color: #888 transparent;
+}
+
+.chat-input textarea::placeholder {
+    color: #626262;
+    font-family: "Baloo Da 2", sans-serif;
+}
+
+.chat-input textarea::focus {
+    border: solid;
+}
+
+
+.messaging-post-char-counter {
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
+    margin: 0;
+    pointer-events: none;
+    font-family: "Roboto Mono", monospace;
+    color: #c4c4c4;
+    margin: 0;
+    font-size: 9px;
+}
+    
+.chat-message {
+    left: 0;
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+    margin-top: 5px;
+}
+
+.chat-timestamp {
+    color: #626262;
+    font-family: "Baloo Da 2", sans-serif;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.chat-username {
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.chat-message-header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 5px; /* Space between header and message */
+}
+
+
+/* project oap */
+
+
+/*oap descs */
+
+.oap-welcome {
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
+}
+.oap-desc {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-weight: '200';
+}
+.oap-desc-link {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-weight: '200';
+    text-decoration: underline;
+}
+
+/*oap posting */
+
+.oap-post-form {
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.post-textarea {
+    resize: vertical;
+    
+}
+
+.oap-post-char-counter {
+    font-family: "Roboto Mono", monospace;
+    color: #c4c4c4;
+    margin: 0;
+    font-size: 9px;
+}
+.post-footer {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.post-to-oap {
+    margin: 0 0 10px 0;
+    font-family: "Roboto Mono", monospace;
+    color: #c4c4c4;
+}
+ 
+.post-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    
+}
+
+.textarea-wrapper {
+    position: relative;
+}
+
+.textarea-wrapper .post-textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 28px;
+}
+
+.textarea-wrapper .oap-post-char-counter {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    margin: 0;
+    pointer-events: none;
+}
+
+.post-box-wrapper input,
+.post-box-wrapper textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #626262;
+    background-color: #494949;
+    color: #c4c4c4;
+    font-family: "Inconsolata", monospace;
+}
+
+.post-box-wrapper input::placeholder, 
+.post-box-wrapper textarea::placeholder {
+    color: #878787;
+    font-family: "Inconsolata", monospace;
+}
+
+.post-box-wrapper input::focus, 
+.post-box-wrapper textarea::focus {
+    outline: none;
+}
+
+.post-error-message {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+}
+
+.post-button {
+    border-radius: 3px;
+    font-family: "Cousine", monospace;
+    background-color: #494949;
+    color:#c4c4c4;
+}
+
+/* oap posts */
+
+.post-card-header {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    font-weight: bold;
+    font-size: 15px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    min-width: 0;
+    flex: 1;    
+    margin-right: 10px;
+}
+
+.post-card-header button {
+    border-radius: 3px;
+    font-family: "Cousine", monospace;
+    background-color: #494949;
+    color:#c4c4c4;
+    margin-left: 5px;
+}
+.post-card-header .delete-post-form {
+    flex-shrink: 0; /* keep delete button from getting squished */
+}
+
+.post-card-poster-info {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-start; 
+}
+
+.post-card-sub-header h6{
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    font-weight: bold;
+    font-size: 15px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    min-width: 0;
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.post-card-header .post-card-sent-at {
+    font-size: 10px;
+    color: #626262;
+}
+
+.post-box {
+    background-color: #303030;
+    border: solid #645f5f 3px;
+    max-width: 700px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+.post-box p {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    margin: 0px;
+    padding: 10px
+}
+
+/* oap creds */
+
+.creds-to-my-fav-person\:D {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.my-fav-person\:D {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #645f5f;
+    margin: auto;
+}
+
+.my-fav-site\:D {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #645f5f;
+    margin: auto;
+}
+
+/* stats statistics */
+.stats-header {
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.stats-sub-header {
+    background-color: #303030;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #626262;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+}
+
+.stats-sub-header-left, .stats-sub-header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.stats-sub-header-left p, .stats-sub-header-right p {
+    margin: auto;
+}
+
+.stats-body {
+    background-color: #303030;
+    border: 1px solid #626262;
+    border-radius: 10px;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.stats-body-left, .stats-body-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* profile */
 
 .countryRock:hover,
 .countryRock:hover img {
@@ -149,24 +876,358 @@ button:hover {
 }
 
 
-/* The sidenav in which i stole from w3schools hooray (useless shit can't even write my own code damn)*/
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
+.profile-header {
+    font-family: "Roboto Mono", monospace;
+    font-size: 40px;
+    color: #c4c4c4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    background-color: #303030;
+    border: 1px solid #626262;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 60%;
+    padding: 15px;
+    box-sizing: border-box;
+    align-items: center;
 }
 
-/* Page content */
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
+.profile-header .countryRock {
+    background: #303030;
+    border: 0;
 }
 
+.profile-header p, .profile-header figure  {
+    margin: 0;
+}
+
+.profile-body {
+    margin: auto;
+    background-color: #303030;
+    border: 1px solid #626262;
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+}
+
+.profile-body-right {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+}
+.profile-body-right button {
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+    background-color: #383838;
+    border: 1px solid #626262;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.profile-body-right button:hover {
+    background-color: #494949;
+    cursor: pointer;
+}
+
+.profile-body-left p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sad-profile-message\:\( {
+    margin: auto;
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+}
+
+.profile-oap-posts {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.profile-oap-posts .post-box {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-oap-posts-header {
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    color: #c4c4c4;
+    margin: 20px;
+}
+
+/* wordley */
+.wordley-header-welcome {
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.wordley-header-desc {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-weight: '200';
+}
+
+.wordley-header-desc a, .wordley-login-or-signup a {
+    color: #645f5f;
+}
+
+.wordley-login-or-signup {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.wordley-login-or-signup p {
+    margin-top: 0;
+}
+
+.letters table {
+    margin: auto;
+}
+
+.letters table td {
+    background-color: #383838;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #626262;
+    font-size: 25px;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #282828;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.guess-area {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.guess-error-message {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+}
+
+.guess-input {
+    background-color: #303030;
+    border: 1px solid #626262;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 25px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+}
+
+.guess-input::placeholder {
+    font-family: "Baloo Da 2", sans-serif;
+}
+
+/* wordley words */
+.wordley-words-header {
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    color: #c4c4c4;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 15px;
+}
+
+.wordley-words-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    color: #c4c4c4;
+}
+
+.wordley-words-back-button {
+    background-color: #303030;
+    border: solid 3px #626262;
+    border-radius: 10px;
+    padding: 10px;
+    color: #c4c4c4;
+    font-family: "Baloo Da 2", sans-serif;
+}
+
+.wordley-words-list {
+    list-style: none;
+    margin-top: 0;
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* collection */
+
+.collection-header {
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.rocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.rock-card {
+    background-color: #303030;
+    border: 3px solid #626262;
+    border-radius: 10px;
+    width: auto;
+    padding: 10px;
+}
+
+.rock-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rock-card-header p {
+    margin: 0;
+}
+
+.rock-card-rock-name {
+    font-family: "Roboto Mono", monospace;
+}
+
+.rock-card-quantity {
+    font-family: "Unica One", sans-serif;
+    color: #c4c4c4;
+    background-color: #383838;
+    border: 2px solid #626262;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rock-card-rarity {
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.rock-card-figcaption {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #626262;
+    font-size: 14px;
+}
+
+
+.rock-card-date-unlocked {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+}
+
+/* rock info, rock_info, rock-info rock information */
+
+.rock-info-title {
+    font-family: "Roboto Mono", monospace;
+    font-size: 25px;
+    color: #c4c4c4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.rock-info-sub-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.rock-info-summary {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+}
+
+.rock-info-sub-header button {
+    background-color: #282828;
+    border: 0;
+}
+
+.rock-info-description {
+    font-family: "Baloo Da 2", sans-serif;
+    color: #c4c4c4;
+}
+.rock-info-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.rock-info-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.rock-info-sources {
+    display: flex;
+    flex-direction: column;
+}
+
+.rock-info-sources-header {
+    font-family: "Roboto Mono", monospace;
+    color: #c4c4c4;
+}
 
 /* id specific styling */
 #unlocked {

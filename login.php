@@ -2,6 +2,7 @@
 
 require_once 'includes/config_session.inc.php';
 
+$redirect = $_GET['redirect']
 ?>
 
 
@@ -18,8 +19,12 @@ require_once 'includes/config_session.inc.php';
             
             <?php if (isset($_SESSION["user_id"])): ?>
 
-            <h3><a href="profile.php?username=<?php echo $_SESSION["username"]?>">Profile</a></h3>
-            <h3><a href="logout.php">Log out</a></h3>
+            <a href="profile.php?username=<?php echo $_SESSION["username"]?>">
+                <img src = 'images/profileIcon.png' width = 30px alt='profile'>
+            </a>
+            <a href="logout.php">
+                <img src = 'images/logoutIcon.png' width = 30px alt = 'logout'>
+            </a>
 
             <?php else: ?>
 
@@ -28,17 +33,26 @@ require_once 'includes/config_session.inc.php';
             
             <?php endif; ?>
                 
-            <h3><a href = "messaging.php?chat=home">CHAT</a></h3>
-            <h3><a href = "collection.php">COLLECTION</a></h3>
-            <h3><a href = "leaderboard.php">LEADERBOARD</a></h3>
-            <h3><a href = "settings.php">SETTINGS</a></h3>
+            <a href = "messaging.php?chat=home">
+                <img src = 'images/chatIcon.png' width = 30px alt = 'chat'>
+            </a>
+            <a href = "collection.php">
+                <img src = 'images/collectionIcon.png' width = 30px alt = 'collection'>
+            </a>
+            <a href = "leaderboard.php">
+                <img src= 'images/leaderboardIcon.png' width = 30px alt = 'leaderboard'>
+            </a>
+            <a href = "settings.php">
+                <img src = 'images/settingsIcon.png' width = 30px alt = 'settings'>
+            </a>
         </header>
-        <form action="includes/login.inc.php" method='POST'>
-            <h2> LOGIN:D </h2>
-            <input type = "text" name = "username" placeholder="awesomerockcollector" id = "usernameInput" autocomplete="on">
-            <input type = "password" name = "pwd" placeholder = "password" id = "pwdInput" autocomplete= "on">
+        <form class = "loginForm" action="includes/login.inc.php" method='POST'>
+            <h2 class = "loginHeader"> LOGIN:D </h2>
+            <input type = "text" name = "username" placeholder="awesomerockcollector" id = "usernameInput" class = "loginInput" autocomplete="on">
+            <input type = "password" name = "pwd" placeholder = "password" id = "pwdInput" class = "loginInput" autocomplete= "on">
+            <input type = 'hidden' name = 'redirect' value = '<?=htmlspecialchars($redirect)?>'>
             <p id="errorMessage" class="error-message"></p>
-            <button id = "logInButton">LET'S GO!</button> 
+            <button id = "logInButton" class = "loginButton">LET'S GO!</button> 
         </form>
         <script src = "login.js" defer></script>
     </body>

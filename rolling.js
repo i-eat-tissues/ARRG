@@ -2,6 +2,8 @@ const rerollButton = document.getElementById("reroll");
 const rockMessage = document.getElementById("rockMessage");
 const unlocked = document.getElementById("unlocked");
 
+const fart = new Audio('sounds/fart.mp3');
+
 let rarity;
 let rockId;
 
@@ -10,6 +12,7 @@ function randint(min, max) {
 }
 
 async function getRock() {
+    fart.play();
     rarity = randint(1, 256);
     if (rarity <= 128) {
         rockId = randint(3, 8);
