@@ -9,9 +9,9 @@ ini_set('session.use_strict_mode', 1); //forces php to reject any non server cre
 
 session_set_cookie_params([ //the array of parameters that each session id will be created following.
     'lifetime' => 1800,
-    'domain' => 'localhost', // CHANGE LATER to domain name 
+    'domain' => 'arrg.gt.tc', // CHANGE LATER to domain name 
     'path' => '/', // "/" allows for ALL paths.
-    'secure' => false, //blocks any attempted access from non-https based urls I THINK CHANGE TO TRUE WHEN USING DOMAIN
+    'secure' => true, //blocks any attempted access from non-https based urls I THINK CHANGE TO TRUE WHEN USING DOMAIN
     'httponly' => true
 ]);
 
